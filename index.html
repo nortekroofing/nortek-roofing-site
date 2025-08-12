@@ -4,41 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nortek Roofing — Commercial & Flat Roofing in Greater Victoria</title>
-  <meta name="description" content="Nortek Roofing specializes in commercial flat roofing, torch-on, metal, and repairs across Greater Victoria." />
+  <meta name="description" content="Nortek Roofing specializes in commercial flat roofing, torch‑on membranes, metal roofing, and repairs across Greater Victoria." />
   <meta property="og:title" content="Nortek Roofing" />
   <meta property="og:description" content="Commercial & flat roofing. Torch‑on, metal, service & repairs. Greater Victoria, Langford, Colwood, Sooke, Metchosin." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://YOURDOMAIN.com/assets/images/og-cover.jpg" />
+  <meta property="og:image" content="https://nortekroofing.ca/assets/images/og-cover.jpg" />
   <link rel="icon" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home">
+      <a class="brand" href="/index.html">
         <img src="/assets/favicon.svg" alt="" class="logo">
         <span>Nortek Roofing</span>
       </a>
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn primary">Get a Quote</a>
+      <nav class="nav" id="nav">
+        <a href="/projects.html">Projects</a>
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="btn primary">Contact</a>
       </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open Menu">☰</button>
     </div>
   </header>
 
-  <main id="home">
+  <main>
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Commercial & Flat Roofing, Done Right.</h1>
-          <p>Torch‑on, metal, and service & repairs delivered by an experienced local team serving Greater Victoria.</p>
+          <h1>Build it once. Build it right.</h1>
+          <p>Commercial & flat roofing with torch‑on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Greater Victoria.</p>
           <div class="cta-row">
-            <a href="#contact" class="btn primary">Request a Quote</a>
-            <a href="#projects" class="btn ghost">See Projects</a>
+            <a class="btn primary" href="/contact.html">Request a Quote</a>
+            <a class="btn ghost" href="/projects.html">See Projects</a>
           </div>
           <div class="trust">
             <img src="/assets/images/badge-safety.svg" alt="COR Safety" />
@@ -47,12 +49,62 @@
           </div>
         </div>
         <div class="hero-art">
-          <img src="/assets/images/hero-roof.jpg" alt="Torch‑on roofing on a commercial building" class="rounded shadow" />
+          <img src="/assets/images/hero-1.jpg" alt="Roofing crew on a torch‑on project" class="rounded shadow" />
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid featured">
+          <a class="feature-card" href="/project.html">
+            <img src="/assets/images/proj-1.jpg" alt="Retail rooftop">
+            <div class="feature-meta">
+              <h3>Langford Retail Plaza</h3>
+              <p class="muted small">Torch‑on membrane • 18,000 sq ft</p>
+            </div>
+          </a>
+          <a class="feature-card" href="/project.html">
+            <img src="/assets/images/proj-2.jpg" alt="Strata roof">
+            <div class="feature-meta">
+              <h3>Harbourview Strata</h3>
+              <p class="muted small">Re‑roof & metal flashings</p>
+            </div>
+          </a>
+          <a class="feature-card" href="/project.html">
+            <img src="/assets/images/proj-3.jpg" alt="Industrial building">
+            <div class="feature-meta">
+              <h3>Industrial Bay A</h3>
+              <p class="muted small">Leak remediation & maintenance</p>
+            </div>
+          </a>
+        </div>
+        <p><a class="btn ghost" href="/projects.html">View All Projects</a></p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="about-split">
+          <div>
+            <h2 class="section-title">Precision, safety, and service.</h2>
+            <p>We’re a family‑run team balancing on‑site craft with tight project coordination. You get clear communication, predictable schedules, and tidy job sites.</p>
+            <ul class="checklist">
+              <li>Licensed, insured, and safety‑first</li>
+              <li>Detailed quotes & progress updates</li>
+              <li>Warranty options available</li>
+            </ul>
+            <p><a class="btn primary" href="/services.html">Explore Services</a></p>
+          </div>
+          <div>
+            <img src="/assets/images/hero-2.jpg" alt="Metal flashing fabrication" class="rounded shadow" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <h2 class="section-title">Services</h2>
         <div class="grid cards">
@@ -70,86 +122,45 @@
           </article>
           <article class="card">
             <h3>Commercial & Multi‑Unit</h3>
-            <p>Professional project coordination for strata, retail, and industrial properties.</p>
+            <p>Professional coordination for strata, retail, and industrial properties.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section alt">
+    <section class="section alt">
       <div class="container">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="gallery">
-          <img src="/assets/images/proj-1.jpg" alt="Project 1" class="rounded shadow" />
-          <img src="/assets/images/proj-2.jpg" alt="Project 2" class="rounded shadow" />
-          <img src="/assets/images/proj-3.jpg" alt="Project 3" class="rounded shadow" />
-          <img src="/assets/images/proj-4.jpg" alt="Project 4" class="rounded shadow" />
-          <img src="/assets/images/proj-5.jpg" alt="Project 5" class="rounded shadow" />
-          <img src="/assets/images/proj-6.jpg" alt="Project 6" class="rounded shadow" />
+        <h2 class="section-title">What clients say</h2>
+        <div class="testimonials">
+          <blockquote class="card">“Fast, reliable, and professional. Our plaza re‑roof finished on schedule and looks great.” <span>— Property Manager</span></blockquote>
+          <blockquote class="card">“They kept the site clean and communicated proactively. Highly recommend.” <span>— Strata Council</span></blockquote>
         </div>
-        <p class="muted small">Replace these placeholder photos by dropping your own images into <code>/assets/images/</code> and updating the file names.</p>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container about-grid">
-        <div>
-          <h2 class="section-title">About Nortek Roofing</h2>
-          <p>We’re a family‑run roofing company based in Greater Victoria, BC. Our team balances on‑site craft with tight project coordination so jobs finish safely, on schedule, and with clean documentation.</p>
-          <ul class="checklist">
-            <li>Fully licensed & insured</li>
-            <li>Safety‑first culture</li>
-            <li>Clear quotes & progress updates</li>
-            <li>Warranty options available</li>
-          </ul>
-        </div>
-        <div class="about-card card">
-          <h3>Service Area</h3>
-          <p>Victoria • Langford • Colwood • View Royal • Sooke • Metchosin • Saanich • Sidney</p>
-          <h3>Contact</h3>
-          <p><strong>Phone:</strong> <a href="tel:+1-250-555-0123">+1 (250) 555‑0123</a><br>
-             <strong>Email:</strong> <a href="mailto:info@YOURDOMAIN.com">info@YOURDOMAIN.com</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Request a Quote</h2>
-        <form class="contact-form" action="mailto:info@YOURDOMAIN.com" method="post" enctype="text/plain">
-          <div class="form-row">
-            <label>
-              <span>Name</span>
-              <input required type="text" name="name" placeholder="Your name">
-            </label>
-            <label>
-              <span>Email</span>
-              <input required type="email" name="email" placeholder="you@example.com">
-            </label>
-          </div>
-          <label>
-            <span>Project Details</span>
-            <textarea name="message" rows="5" placeholder="Tell us about your roof, location, and timeline."></textarea>
-          </label>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="muted small">Prefer email or phone? Reach us at <a href="mailto:info@YOURDOMAIN.com">info@YOURDOMAIN.com</a> or <a href="tel:+1-250-555-0123">+1 (250) 555‑0123</a>.</p>
-        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Nortek Roofing • Greater Victoria, BC</p>
-      <nav class="footer-nav">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container footer-grid">
+      <div>
+        <h4>Nortek Roofing</h4>
+        <p class="muted small">Victoria • Langford • Colwood • View Royal • Sooke • Metchosin • Saanich • Sidney</p>
+        <p class="muted small">+1 (250) 555-0123<br><a href="mailto:info@nortekroofing.ca">info@nortekroofing.ca</a></p>
+      </div>
+      <div>
+        <h5>Learn More</h5>
+        <p class="footer-links"><a href="/services.html">Services</a> · <a href="/about.html">About</a> · <a href="/projects.html">Projects</a></p>
+      </div>
+      <div>
+        <h5>Get a Quote</h5>
+        <p class="muted small">Tell us about your project and timeline. We’ll get back to you quickly.</p>
+        <p><a class="btn primary" href="/contact.html">Request a Quote</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2025</span> Nortek Roofing. All rights reserved.</p>
     </div>
   </footer>
-
   <script src="/assets/script.js"></script>
+
 </body>
 </html>
