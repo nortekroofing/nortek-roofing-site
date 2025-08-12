@@ -17,7 +17,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
@@ -35,18 +34,9 @@
   </header>
 
   <main>
-    <!-- Fullscreen video hero (all files in root) -->
-    <section class="hero hero-video" id="home">
-      <video
-        class="hero-bg"
-        src="hero.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="hero-poster.jpg"
-      ></video>
-
+    <!-- Fullscreen video hero (flat structure: hero.mp4 + hero-poster.jpg in root) -->
+    <section class="hero-video" id="home">
+      <video class="hero-bg" src="hero.mp4" autoplay muted loop playsinline poster="hero-poster.jpg"></video>
       <div class="hero-overlay container">
         <h1>Build it once. Build it right.</h1>
         <p>Commercial & flat roofing with torch‑on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Greater Victoria.</p>
@@ -60,12 +50,10 @@
           <img src="badge-warranty.svg" alt="Warranty Available" />
         </div>
       </div>
-
-      <button class="scroll-cue" aria-label="Scroll to content"
-        onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
+      <button class="scroll-cue" aria-label="Scroll" onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
     </section>
 
-    <!-- Your existing sections can stay the same; just ensure image paths are root-relative -->
+    <!-- Featured Projects -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
@@ -96,6 +84,7 @@
       </div>
     </section>
 
+    <!-- About split -->
     <section class="section alt">
       <div class="container">
         <div class="about-split">
@@ -116,6 +105,7 @@
       </div>
     </section>
 
+    <!-- Services -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Services</h2>
@@ -140,6 +130,7 @@
       </div>
     </section>
 
+    <!-- Testimonials -->
     <section class="section alt">
       <div class="container">
         <h2 class="section-title">What clients say</h2>
@@ -155,7 +146,7 @@
     <div class="container footer-grid">
       <div>
         <h4>Nortek Roofing</h4>
-        <p class="muted small">Victoria • Langford • Colwood • View Royal • Sooke</p>
+        <p class="muted small">Victoria • Langford • Colwood • View Royal • Sooke • Metchosin • Saanich • Sidney</p>
         <p class="muted small"><a href="tel:2505907164">250-590-7164</a><br><a href="mailto:info@nortekexteriors.com">info@nortekexteriors.com</a></p>
       </div>
       <div>
@@ -174,5 +165,11 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- Auto-measure header height for perfect hero sizing -->
+  <script>
+    const hdr = document.querySelector('.site-header');
+    const setH = () => document.documentElement.style.setProperty('--header-h', (hdr?.offsetHeight || 64) + 'px');
+    addEventListener('load', setH); addEventListener('resize', setH);
+  </script>
 </body>
 </html>
