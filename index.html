@@ -36,16 +36,23 @@
 
   <main>
     <!-- Fullscreen video hero (all files in root) -->
-    <section class="hero hero-video" id="home">
-      <video
-        class="hero-bg"
-        src="hero.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="hero-poster.jpg"
-      ></video>
+   <section class="hero-video">
+  <video class="hero-bg" src="hero.mp4" autoplay muted loop playsinline poster="hero-poster.jpg"></video>
+  <div class="hero-overlay">
+    <h1>Build it once. Build it right.</h1>
+    <p>Commercial & flat roofing with torch-on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Greater Victoria.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="/contact.html">Request a Quote</a>
+      <a class="btn ghost" href="/projects.html">See Projects</a>
+    </div>
+    <div class="trust">
+      <img src="badge-safety.svg" alt="COR Safety" />
+      <img src="badge-insured.svg" alt="Licensed & Insured" />
+      <img src="badge-warranty.svg" alt="Warranty Available" />
+    </div>
+  </div>
+  <button class="scroll-cue" aria-label="Scroll" onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
+</section>
 
       <div class="hero-overlay container">
         <h1>Build it once. Build it right.</h1>
