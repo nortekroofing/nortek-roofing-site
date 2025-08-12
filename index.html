@@ -16,6 +16,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  const v = document.getElementById('heroVideo');
+  if (v) {
+    v.muted = true;           // some browsers need the property set, not just the attribute
+    v.playsInline = true;
+    const tryPlay = () => v.play().catch(()=>{ /* ignore until user interacts */ });
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('canplay', tryPlay, { once: true });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
+  }
+</script>
 <body>
 
   <header class="site-header">
