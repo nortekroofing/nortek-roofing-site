@@ -34,8 +34,14 @@
       <div class="hero-overlay">
         <h1>Built for the West Coast.</h1>
         <div class="cta-row">
-          <a class="btn primary" href="contact.html">Request a Quote</a>
           <a class="btn ghost glass" href="services.html">Explore Services</a>
+          <button
+  class="glass-cue"
+  aria-label="Scroll to content"
+  onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})"
+>
+  <span class="glass-cue__arrow" aria-hidden="true"></span>
+</button>
         </div>
       </div>
     </section>
