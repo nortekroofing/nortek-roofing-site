@@ -323,3 +323,40 @@ h1,h2,h3{line-height:1.2}
 @media (max-width: 980px){
   .cta-row.split{ grid-template-columns:1fr; }
 }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+  margin: 0 0 14px;
+}
+
+/* Keep CTA rows centered */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* Keep scroll arrow in the flow under the buttons */
+.glass-cue {
+  margin-top: 22px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+}
