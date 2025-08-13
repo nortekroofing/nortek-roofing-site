@@ -1,0 +1,66 @@
+[
+  {
+    "id": "proj1",
+    "title": "Project 1",
+    "cover": "images/proj-1.jpg",
+    "media": [
+      "images/proj-1.jpg"
+    ]
+  },
+  {
+    "id": "proj2",
+    "title": "Project 2",
+    "cover": "images/proj-2.jpg",
+    "media": [
+      "images/proj-2.jpg"
+    ]
+  },
+  {
+    "id": "proj3",
+    "title": "Project 3",
+    "cover": "images/proj-3.jpg",
+    "media": [
+      "images/proj-3.jpg"
+    ]
+  },
+  {
+    "id": "proj4",
+    "title": "Project 4",
+    "cover": "images/proj-4.jpg",
+    "media": [
+      "images/proj-4.jpg"
+    ]
+  },
+  {
+    "id": "proj5",
+    "title": "Project 5",
+    "cover": "images/proj-5.jpg",
+    "media": [
+      "images/proj-5.jpg"
+    ]
+  },
+  {
+    "id": "proj6",
+    "title": "Project 6",
+    "cover": "images/proj-6.jpg",
+    "media": [
+      "images/proj-6.jpg"
+    ]
+  },
+  {
+    "id": "proj7",
+    "title": "Project 7",
+    "cover": "images/proj-7.jpg",
+    "media": [
+      "images/proj-7.jpg"
+    ]
+  },
+  {
+    "id": "proj8",
+    "title": "Project 8",
+    "cover": "images/proj-8.jpg",
+    "media": [
+      "images/proj-8.jpg"
+    ]
+  }
+]

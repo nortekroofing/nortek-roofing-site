@@ -1,35 +1,21 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Nortek Roofing</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — Nortek Roofing</title><link rel="stylesheet" href="style.css"/></head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="logo.png" class="logo" alt=""><span>Nortek Roofing</span></a>
-    <nav class="nav" id="nav">
-      <a href="projects.html">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html" class="btn primary">Contact</a>
-    </nav><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-  </div>
-</header>
-<main>
-  <section class="section">
-    <div class="container">
-      <h1 class="section-title">Request a Quote</h1>
-      <p class="muted">Email us directly at <a href="mailto:info@nortekexteriors.com">info@nortekexteriors.com</a> or use the form below.</p>
-      <form action="mailto:info@nortekexteriors.com" method="post" enctype="text/plain" class="card">
-        <label>Name<br><input type="text" name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #23303a;background:#0d1217;color:#e8edf2"></label><br><br>
-        <label>Email<br><input type="email" name="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #23303a;background:#0d1217;color:#e8edf2"></label><br><br>
-        <label>Phone<br><input type="tel" name="phone" style="width:100%;padding:10px;border-radius:8px;border:1px solid #23303a;background:#0d1217;color:#e8edf2"></label><br><br>
-        <label>Message<br><textarea name="message" rows="5" style="width:100%;padding:10px;border-radius:8px;border:1px solid #23303a;background:#0d1217;color:#e8edf2"></textarea></label><br><br>
-        <button class="btn primary" type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-</main>
-<footer class="site-footer"><div class="container footer-bottom"><p>© <span id="year">2025</span> Nortek Roofing.</p></div></footer>
-<script src="script.js"></script>
+  <div id="site-header"></div>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Request a Quote</h1>
+        <p class="muted">Email us at <a id="contact-email" href="#">email</a> or call <a id="contact-phone" href="#">phone</a>.</p>
+        <script>fetch('data/site-config.json').then(r=>r.json()).then(c=>{ 
+          const e=document.getElementById('contact-email'); e.textContent=c.email; e.href='mailto:'+c.email;
+          const p=document.getElementById('contact-phone'); p.textContent=c.phone_display; p.href=c.phone_href; 
+        });</script>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="includes.js"></script>
 </body>
 </html>

@@ -6,28 +6,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="logo.png" class="logo" alt=""><span>Nortek Roofing</span></a>
-    <nav class="nav" id="nav">
-      <a href="projects.html">Projects</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html" class="btn primary">Contact</a>
-    </nav><button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-  </div>
-</header>
-<main>
-  <section class="section">
-    <div class="container">
-      <h1 class="section-title">Projects</h1>
-      <p class="muted">A handful of representative jobs — more references available on request.</p>
-      <div class="grid featured">
-        <a class="feature-card" href="project.html"><img src="proj-1.jpg" alt=""><div class="feature-meta"><h3>Langford Retail Plaza</h3><p class="muted small">Commercial — Torch‑on</p></div></a>
-        <a class="feature-card" href="project.html"><img src="proj-2.jpg" alt=""><div class="feature-meta"><h3>Harbourview Strata</h3><p class="muted small">Commercial — Re‑roof</p></div></a>
-        <a class="feature-card" href="project.html"><img src="proj-3.jpg" alt=""><div class="feature-meta"><h3>Meaford Heights</h3><p class="muted small">Residential — Low‑slope</p></div></a>
+  <div id="site-header"></div>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Projects</h1>
+        <div id="projects" class="projects-grid"></div>
       </div>
-    </div>
-  </section>
-</main>
-<footer class="site-footer"><div class="container footer-bottom"><p>© <span id="year">2025</span> Nortek Roofing.</p></div></footer>
-<script src="script.js"></script>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="includes.js"></script>
+  <script>
+    fetch('data/projects.json').then(r=>r.json()).then(list => {
+      const grid = document.getElementById('projects');
+      grid.innerHTML = list.map(p => \`
+        <a href="project.html?id=\${encodeURIComponent(p.id)}">
+          <img src="\${p.cover}" alt="\${p.title}">
+          <div class="feature-meta" style="padding:10px"><h3>\${p.title}</h3></div>
+        </a>\`
+      ).join('');
+    });
+  </script>
 </body>
 </html>

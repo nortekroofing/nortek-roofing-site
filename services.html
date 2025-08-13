@@ -3,62 +3,28 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services — Nortek Roofing</title>
-  <link rel="icon" href="favicon.svg" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><img src="logo.png" class="logo" alt=""><span>Nortek Roofing</span></a>
-      <nav class="nav" id="nav">
-        <a href="projects.html">Projects</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="btn primary">Contact</a>
-      </nav>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-    </div>
-  </header>
-
+  <div id="site-header"></div>
   <main>
     <section class="section services-landing">
       <div class="container">
         <h1 class="section-title">How can we help?</h1>
-        <p class="muted">Choose the track that fits you best—we tailor scope, communication, and deliverables for each.</p>
-
         <div class="select-grid">
-          <!-- Commercial -->
-          <a class="select-card" href="services-commercial.html" style="--card-bg:url('services-commercial.jpg')">
+          <a class="select-card" href="services-commercial.html" style="--card-bg:url('images/services-commercial.jpg')">
             <div class="select-card__shade"></div>
-            <div class="select-card__glass">
-              <h2>Commercial</h2>
-              <p>For consultants, GCs, strata, retail, and industrial projects.</p>
-              <span class="select-card__tag">Submittals • Scheduling • Close‑out docs</span>
-            </div>
+            <div class="select-card__glass"><h2>Commercial</h2></div>
           </a>
-
-          <!-- Residential -->
-          <a class="select-card" href="services-residential.html" style="--card-bg:url('services-residential.jpg')">
+          <a class="select-card" href="services-residential.html" style="--card-bg:url('images/services-residential.jpg')">
             <div class="select-card__shade"></div>
-            <div class="select-card__glass">
-              <h2>Residential</h2>
-              <p>For homeowners and property managers—from leak repair to full re‑roof.</p>
-              <span class="select-card__tag">Transparent quotes • Clean sites • Warranties</span>
-            </div>
+            <div class="select-card__glass"><h2>Residential</h2></div>
           </a>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <p>© <span id="year">2025</span> Nortek Roofing.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <div id="site-footer"></div>
+  <script src="includes.js"></script>
 </body>
 </html>

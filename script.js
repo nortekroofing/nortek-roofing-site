@@ -1,10 +1,4 @@
-
-// Year stamp
-document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
-// Mobile menu toggle
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.getElementById('nav');
-if(menuBtn && nav){ menuBtn.addEventListener('click', ()=> nav.classList.toggle('open')); }
+// script.js
 // Hero autoplay nudge
 const v = document.getElementById('heroVideo');
 if (v){
