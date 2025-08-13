@@ -10,8 +10,8 @@ async function applyConfig(){
   const cfg = await fetch('data/site-config.json').then(r => r.json()).catch(()=>null);
   if (!cfg) return;
   // header
-  const logo = document.getElementById('site-logo');
-  if (logo && cfg.logo) logo.src = cfg.logo;
+  const logos = document.querySelectorAll('.site-logo');
+  if (cfg.logo) logos.forEach(l => l.src = cfg.logo);
   const brand = document.getElementById('brand-name');
   if (brand && cfg.company) brand.textContent = cfg.company;
 
