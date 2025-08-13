@@ -33,7 +33,7 @@ h1,h2,h3{line-height:1.2}
 .hero-overlay > *{max-width:min(900px,92vw)}
 .hero-overlay h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 1rem}
 .hero-overlay p{max-width:760px;margin:0 0 1.0rem}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:50px 0 0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:100px 0 0}
 
 /* Scroll arrow pinned to bottom of hero */
 .scroll-cue {
