@@ -13,7 +13,7 @@ img{max-width:100%;height:auto;display:block}
 h1,h2,h3{line-height:1.2}
 
 /* Header */
-.site-header{position:fixed;top:0;z-index:10;background:rgba(15,18,21,.7);backdrop-filter:blur(30px);border-bottom:1px solid #1f2730}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(15,18,21,.7);backdrop-filter:blur(30px);border-bottom:1px solid #1f2730}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;gap:10px;align-items:center;font-weight:700}
 .logo{width:140px;height:auto;border-radius:6px}
