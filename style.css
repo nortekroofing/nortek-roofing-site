@@ -154,3 +154,21 @@ h1,h2,h3{line-height:1.2}
   .select-grid{ grid-template-columns: 1fr; }
   .select-card{ height: clamp(320px, 50vh, 520px); }
 }
+.btn.ghost.glass {
+  background-color: rgba(255, 255, 255, 0.15); /* semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3);   /* subtle border */
+  backdrop-filter: blur(12px) saturate(180%);   /* glass effect */
+  -webkit-backdrop-filter: blur(12px) saturate(180%); /* Safari support */
+  color: #fff; /* text color */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.ghost.glass:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+}
