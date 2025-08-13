@@ -16,7 +16,7 @@ h1,h2,h3{line-height:1.2}
 .site-header{position:fixed;top:0;z-index:10;background:rgba(15,18,21,.7);backdrop-filter:blur(30px);border-bottom:1px solid #1f2730}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;gap:10px;align-items:center;font-weight:700}
-.logo{width:70px;height:auto;border-radius:6px}
+.logo{width:140px;height:auto;border-radius:6px}
 .nav{display:flex;gap:18px;align-items:center}
 .menu-btn{display:none}
 .btn{padding:10px 14px;border-radius:12px;border:1px solid #23303a;display:inline-block}
@@ -26,7 +26,7 @@ h1,h2,h3{line-height:1.2}
 
 /* Hero video */
 .hero-video{
-  position:relative;width:100%;
+  position:relative;width:105%;
   height:calc(100svh - var(--header-h));
   margin-top:var(--header-h);
   overflow:hidden;background:#0d1217;border-bottom:1px solid #1f2730;
