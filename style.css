@@ -172,3 +172,93 @@ h1,h2,h3{line-height:1.2}
   background-color: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.4);
 }
+/* ===== Glass Scroll Arrow ===== */
+.glass-cue{
+  position: absolute;            /* place inside your hero container */
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.28);
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.14), rgba(255,255,255,.06))
+    , rgba(255,255,255,.06);     /* subtle milkiness */
+  color: #fff;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%); /* Safari */
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    0 10px 26px rgba(0,0,0,.35);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+  z-index: 5;                    /* above the video */
+}
+
+.glass-cue:hover{
+  transform: translateX(-50%) translateY(-2px);
+  border-color: rgba(255,255,255,.4);
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,.18), rgba(255,255,255,.08))
+    , rgba(255,255,255,.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.28),
+    0 16px 36px rgba(0,0,0,.45);
+}
+
+/* Arrow glyph (pure CSS) */
+.glass-cue__arrow{
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.glass-cue__arrow::before,
+.glass-cue__arrow::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  background: currentColor;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* arrow stem */
+.glass-cue__arrow::before{
+  width: 2px;
+  height: 18px;
+  top: 0;
+  box-shadow: 0 0 12px rgba(255,255,255,.5);
+}
+
+/* arrowhead (chevron) */
+.glass-cue__arrow::after{
+  width: 10px;
+  height: 10px;
+  bottom: 1px;
+  transform: translateX(-50%) rotate(45deg);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  background: transparent;
+}
+
+/* Soft breathing/bounce animation */
+@keyframes cue-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(-6px); }
+}
+.glass-cue{ animation: cue-bounce 2.2s ease-in-out infinite; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .glass-cue{ animation: none; }
+}
+
+/* If your hero is dark, the default color is fine; for light heroes, darken: */
+/*
+.glass-cue{ color:#0e1419; border-color: rgba(0,0,0,.25); }
+*/
