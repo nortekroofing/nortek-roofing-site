@@ -105,3 +105,29 @@ h1,h2,h3{line-height:1.2;color:var(--text)}
 .section{padding:60px 0;background:var(--bg)}
 .section.alt{background:var(--surface)}
 .section-title{text-align:center;margin-bottom:40px;color:var(--text)}
+/* Glass Scroll Arrow */
+.scroll-cue {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.25); /* Frosted glass background */
+  backdrop-filter: blur(10px); /* Glass blur */
+  border-radius: 50%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-cue:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.scroll-cue i {
+  display: block;
+  font-size: 1.2rem;
+}
