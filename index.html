@@ -15,23 +15,18 @@
   <div id="site-header"></div>
 
   <main>
-    <section class="hero-video" id="home">
-      <video id="heroVideo" class="hero-bg" autoplay muted playsinline webkit-playsinline loop preload="metadata" poster="hero-poster.jpg">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay">
-        <h1>Built for the West Coast.</h1>
-        <div class="cta-row">
-          <a class="btn glass" href="services.html">Explore Services</a>
-        </div>
-        <div class="cta-row">
-          <div class="glass-cue" aria-label="Scroll to content"
-            onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">
-            <span class="glass-cue__arrow" aria-hidden="true"></span>
-          </div>
-        </div>
-      </div>
-    </section>
+   <section class="hero-video">
+  <video id="heroVideo" class="hero-bg" autoplay muted playsinline loop preload="metadata">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1>Built for the West Coast.</h1>
+    <a class="btn glass" href="services.html">Explore Services</a>
+  </div>
+
+  <!-- Scroll Arrow -->
+  <a href="#next-section" class="scroll-cue">&#x25BC;</a>
+</section>
 
     <section class="section">
       <div class="container">
