@@ -3,21 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nortek Roofing — Commercial & Flat Roofing in Greater Victoria</title>
-  <meta name="description" content="Nortek Roofing specializes in commercial flat roofing, torch‑on membranes, custom metal, and repairs across Greater Victoria." />
-  <meta property="og:title" content="Nortek Roofing" />
-  <meta property="og:description" content="Commercial & flat roofing. Torch‑on, metal, service & repairs. Victoria, Langford, Colwood, Sooke" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.nortekroofing.ca/hero-poster.jpg" />
-  <meta property="og:url" content="https://www.nortekroofing.ca/" />
-  <link rel="canonical" href="https://www.nortekroofing.ca/" />
+  <title>Nortek Roofing — Commercial & Residential Roofing on Vancouver Island</title>
+  <meta name="description" content="Commercial & residential roofing. Torch‑on membranes, metal, repairs and maintenance for Greater Victoria and Vancouver Island." />
   <link rel="icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
@@ -35,48 +28,50 @@
   </header>
 
   <main>
-    <!-- Fullscreen video hero (all files in root) -->
-  <section class="hero-video">
-  <video id="heroVideo" class="hero-bg" autoplay muted playsinline loop preload="metadata" poster="hero-poster.jpg">
-    <source src="hero.mp4" type="video/mp4">
-  </video>
+    <section class="hero-video">
+      <video id="heroVideo" class="hero-bg" autoplay muted playsinline webkit-playsinline loop preload="metadata" poster="hero-poster.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay">
+        <span class="badge">Commercial • Residential</span>
+        <h1>Built for the West Coast.</h1>
+        <p>Flat & low‑slope roofing with torch‑on membranes, custom metal, and responsive service. Safety, documentation, and clean finishes for consultants, GCs, and homeowners.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="contact.html">Request a Quote</a>
+          <a class="btn ghost" href="services.html">Explore Services</a>
+        </div>
+        <div class="kv">
+          <span class="badge">COR‑minded safety</span>
+          <span class="badge">Licensed & Insured</span>
+          <span class="badge">Warranty options</span>
+        </div>
+      </div>
+      <button class="scroll-cue" aria-label="Scroll" onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
+    </section>
 
-  <div class="hero-overlay">
-    <h1>Built for the West Coast.</h1>
-    <p>Commercial & flat roofing with torch-on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Vancouver Island.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="contact.html">Request a Quote</a>
-      <a class="btn ghost" href="projects.html">See Projects</a>
-    </div>
-  </div>
-
-  <button class="scroll-cue" aria-label="Scroll"
-    onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
-</section>
-    <!-- Your existing sections can stay the same; just ensure image paths are root-relative -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
         <div class="grid featured">
           <a class="feature-card" href="project.html">
-            <img src="proj-1.jpg" alt="Boulderhouse" loading="lazy">
+            <img src="proj-1.jpg" alt="Retail rooftop" loading="lazy">
             <div class="feature-meta">
-              <h3>Boulderhouse Climbing Langford</h3>
-              <p class="muted small">1109 Langford Pkwy</p>
+              <h3>Langford Retail Plaza</h3>
+              <p class="muted small">Torch‑on membrane • 18,000 sq ft</p>
             </div>
           </a>
           <a class="feature-card" href="project.html">
             <img src="proj-2.jpg" alt="Strata roof" loading="lazy">
             <div class="feature-meta">
-              <h3>Hull's Corner Business Park</h3>
-              <p class="muted small">967 Langford Pkwy</p>
+              <h3>Harbourview Strata</h3>
+              <p class="muted small">Re‑roof & metal flashings</p>
             </div>
           </a>
           <a class="feature-card" href="project.html">
             <img src="proj-3.jpg" alt="Industrial building" loading="lazy">
             <div class="feature-meta">
-              <h3>Meaford Heights Apartments</h3>
-              <p class="muted small">728 Meaford Ave</p>
+              <h3>Industrial Bay A</h3>
+              <p class="muted small">Leak remediation & maintenance</p>
             </div>
           </a>
         </div>
@@ -89,51 +84,20 @@
         <div class="about-split">
           <div>
             <h2 class="section-title">Precision, safety, and service.</h2>
-            <p>We’re a family‑run team balancing on‑site craft with tight project coordination. You get clear communication, predictable schedules, and tidy job sites.</p>
+            <p>We balance on‑site craft with tight project coordination. Clear communication, predictable schedules, and tidy job sites — whether you’re a GC, consultant, or homeowner.</p>
             <ul class="checklist">
-              <li>Licensed, insured, and safety‑first</li>
-              <li>Detailed quotes & progress updates</li>
-              <li>Warranty options available</li>
+              <li>Detailed scopes & submittals for consultants/GCs</li>
+              <li>Respectful crews & clean finishes for homeowners</li>
+              <li>Proactive progress updates and close‑out docs</li>
             </ul>
-            <p><a class="btn primary" href="services.html">Explore Services</a></p>
+            <p>
+              <a class="btn primary" href="services-commercial.html">For Consultants & GCs</a>
+              <a class="btn ghost" href="services-residential.html">For Homeowners</a>
+            </p>
           </div>
           <div>
             <img src="hero-2.jpg" alt="Metal flashing fabrication" class="rounded shadow" loading="lazy"/>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="grid cards">
-          <article class="card">
-            <h3>Torch‑On Membrane</h3>
-            <p>Durable SBS torch‑on systems for new builds, re‑roofs, and waterproofing details.</p>
-          </article>
-          <article class="card">
-            <h3>Metal Roofing & Flashings</h3>
-            <p>Custom‑fabricated flashings and standing seam systems for longevity and style.</p>
-          </article>
-          <article class="card">
-            <h3>Repairs & Maintenance</h3>
-            <p>Leak investigation, emergency repairs, and preventative maintenance programs.</p>
-          </article>
-          <article class="card">
-            <h3>Commercial & Multi‑Unit</h3>
-            <p>Professional coordination for strata, retail, and industrial properties.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <h2 class="section-title">What clients say</h2>
-        <div class="testimonials">
-          <blockquote class="card">“Fast, reliable, and professional. Our plaza re‑roof finished on schedule and looks great.” <span>— Property Manager</span></blockquote>
-          <blockquote class="card">“They kept the site clean and communicated proactively. Highly recommend.” <span>— Strata Council</span></blockquote>
         </div>
       </div>
     </section>
@@ -143,8 +107,8 @@
     <div class="container footer-grid">
       <div>
         <h4>Nortek Roofing</h4>
-        <p class="muted small">Victoria • Westshore • Nanaimo</p>
-        <p class="muted small"><a href="tel:2505907164">+1 (250) 590 - 7164</a><br><a href="mailto:info@nortekexteriors.com">info@nortekexteriors.com</a></p>
+        <p class="muted small">Vancouver Island • Greater Victoria • Westshore</p>
+        <p class="muted small"><a href="tel:2505907164">+1 (250) 590‑7164</a><br><a href="mailto:info@nortekexteriors.com">info@nortekexteriors.com</a></p>
       </div>
       <div>
         <h5>Learn More</h5>
@@ -162,16 +126,5 @@
   </footer>
 
   <script src="script.js"></script>
-   <script>
-  const v = document.getElementById('heroVideo');
-  if (v) {
-    v.muted = true;           // some browsers need the property set, not just the attribute
-    v.playsInline = true;
-    const tryPlay = () => v.play().catch(()=>{ /* ignore until user interacts */ });
-    if (v.readyState >= 2) tryPlay();
-    else v.addEventListener('canplay', tryPlay, { once: true });
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
-  }
-</script>
 </body>
 </html>
