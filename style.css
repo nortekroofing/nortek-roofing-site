@@ -111,7 +111,7 @@
 .lightbox img{max-width:90vw;max-height:85vh;border-radius:12px}
 
 /* Footer */
-.site-footer .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+.site-footer .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
 .footer-bottom{padding:12px 0;border-top:1px solid #22303a;margin-top:18px}
 
 /* Responsive */
