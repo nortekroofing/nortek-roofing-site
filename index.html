@@ -36,20 +36,22 @@
 
   <main>
     <!-- Fullscreen video hero (all files in root) -->
-   <section class="hero-video">
-  <video class="hero-bg" src="hero.mp4" autoplay muted loop playsinline poster="hero-poster.jpg"></video>
+  <section class="hero-video">
+  <video id="heroVideo" class="hero-bg" autoplay muted playsinline loop preload="metadata" poster="hero-poster.jpg">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+
   <div class="hero-overlay">
     <h1>Built for the West Coast.</h1>
-    <p>Commercial & flat roofing with torch-on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Greater Victoria.</p>
+    <p>Commercial & flat roofing with torch-on membranes, custom metal, and responsive service. We deliver safety, documentation, and clean finishes across Vancouver Island.</p>
     <div class="cta-row">
-      <a class="btn primary" href="/contact.html">Request a Quote</a>
-      <a class="btn ghost" href="/projects.html">See Projects</a>
-    </div>
-    <div class="trust">
-     
+      <a class="btn primary" href="contact.html">Request a Quote</a>
+      <a class="btn ghost" href="projects.html">See Projects</a>
     </div>
   </div>
-  <button class="scroll-cue" aria-label="Scroll" onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
+
+  <button class="scroll-cue" aria-label="Scroll"
+    onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">↓</button>
 </section>
     <!-- Your existing sections can stay the same; just ensure image paths are root-relative -->
     <section class="section">
@@ -141,7 +143,7 @@
     <div class="container footer-grid">
       <div>
         <h4>Nortek Roofing</h4>
-        <p class="muted small">Victoria • Langford • Colwood • Sooke</p>
+        <p class="muted small">Victoria • Westshore • Nanaimo</p>
         <p class="muted small"><a href="tel:2505907164">+1 (250) 590 - 7164</a><br><a href="mailto:info@nortekexteriors.com">info@nortekexteriors.com</a></p>
       </div>
       <div>
@@ -160,5 +162,16 @@
   </footer>
 
   <script src="script.js"></script>
+   <script>
+  const v = document.getElementById('heroVideo');
+  if (v) {
+    v.muted = true;           // some browsers need the property set, not just the attribute
+    v.playsInline = true;
+    const tryPlay = () => v.play().catch(()=>{ /* ignore until user interacts */ });
+    if (v.readyState >= 2) tryPlay();
+    else v.addEventListener('canplay', tryPlay, { once: true });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) tryPlay(); });
+  }
+</script>
 </body>
 </html>
