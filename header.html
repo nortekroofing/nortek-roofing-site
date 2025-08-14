@@ -2,11 +2,17 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img src="favicon.svg" alt="Nortek Roofing logo" class="logo site-logo">
+      <img src="favicon.svg" alt="Nortek Roofing logo" class="logo site-logo" />
     </a>
     <nav class="nav" id="nav">
       <a href="projects.html">Projects</a>
-      <a href="services.html">Services</a>
+      <div class="dropdown">
+        <button class="dropbtn" aria-expanded="false">Services</button>
+        <div class="dropdown-menu" role="menu">
+          <a href="services-residential.html">Residential</a>
+          <a href="services-commercial.html">Commercial</a>
+        </div>
+      </div>
       <a href="about.html">About</a>
       <a href="contact.html" class="btn primary">Contact</a>
     </nav>
