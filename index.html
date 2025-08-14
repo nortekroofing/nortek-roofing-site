@@ -1,121 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nortek Roofing — Commercial & Residential Roofing</title>
-    <meta
-      name="description"
-      content="Flat & low‑slope roofing with torch‑on membranes, custom metal, and responsive service across Greater Victoria."
-    />
-    <link rel="icon" href="favicon.svg" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="home">
-    <div id="site-header"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nortek Roofing — Commercial & Residential Roofing</title>
+  <meta name="description" content="Flat & low‑slope roofing with torch‑on membranes, custom metal, and responsive service across Greater Victoria." />
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home">
 
-    <main>
-      <section class="hero" id="home">
-        <div
-          class="hero-bg"
-          style="background-image: url(&quot;hero-1.jpg&quot;)"
-        ></div>
-        <div class="hero-overlay">
-          <h1>Metal Roofing Built to Last</h1>
-          <p>
-            Reliable commercial and residential roofing across Greater Victoria.
-          </p>
-          <div class="cta-row">
-            <a class="btn primary" href="contact.html">Get a Quote</a>
-            <a class="btn glass" href="projects.html">View Projects</a>
-          </div>
-          <div class="cta-row">
-            <div
-              class="glass-cue"
-              aria-label="Scroll to content"
-              onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})"
-            >
-              <span class="glass-cue__arrow" aria-hidden="true"></span>
-            </div>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero-video" id="home">
+      <video id="heroVideo" class="hero-bg" autoplay muted playsinline webkit-playsinline loop preload="metadata" poster="images/hero-poster.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay">
+        <h1>Built for the West Coast.</h1>
+        <div class="cta-row">
+          <a class="btn glass" href="services.html">Explore Services</a>
+        </div>
+        <div class="cta-row">
+          <div class="glass-cue" aria-label="Scroll to content"
+            onclick="document.querySelector('main .section')?.scrollIntoView({behavior:'smooth'})">
+            <span class="glass-cue__arrow" aria-hidden="true"></span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Our Services</h2>
-          <div class="grid cards">
-            <div class="card">
-              <h3>Residential Roofing</h3>
-              <p class="small muted">
-                Durable, energy-efficient roofs for your home.
-              </p>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid featured">
+          <a class="feature-card" href="projects.html">
+            <img src="images/proj-1.jpg" alt="Retail rooftop" loading="lazy">
+            <div class="feature-meta">
+              <h3>Boulderhouse Climbing</h3>
             </div>
-            <div class="card">
-              <h3>Commercial Roofing</h3>
-              <p class="small muted">
-                Large-scale roofing solutions built for performance.
-              </p>
+          </a>
+          <a class="feature-card" href="projects.html">
+            <img src="images/proj-2.jpg" alt="Strata roof" loading="lazy">
+            <div class="feature-meta">
+              <h3>Hull's Corner Business Park</h3>
             </div>
-            <div class="card">
-              <h3>Metal Fabrication</h3>
-              <p class="small muted">
-                Custom metal systems tailored to your project.
-              </p>
+          </a>
+          <a class="feature-card" href="projects.html">
+            <img src="images/proj-3.jpg" alt="Industrial building" loading="lazy">
+            <div class="feature-meta">
+              <h3>Meaford Avenue Apartments</h3>
             </div>
-            <div class="card">
-              <h3>Repairs &amp; Maintenance</h3>
-              <p class="small muted">
-                Responsive service to keep your roof performing.
-              </p>
-            </div>
-          </div>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="grid featured">
-            <a class="feature-card" href="projects.html">
-              <img
-                src="images/proj-1.jpg"
-                alt="Retail rooftop"
-                loading="lazy"
-              />
-              <div class="feature-meta">
-                <h3>Boulderhouse Climbing</h3>
-              </div>
-            </a>
-            <a class="feature-card" href="projects.html">
-              <img src="images/proj-2.jpg" alt="Strata roof" loading="lazy" />
-              <div class="feature-meta">
-                <h3>Hull's Corner Business Park</h3>
-              </div>
-            </a>
-            <a class="feature-card" href="projects.html">
-              <img
-                src="images/proj-3.jpg"
-                alt="Industrial building"
-                loading="lazy"
-              />
-              <div class="feature-meta">
-                <h3>Meaford Avenue Apartments</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
+  <div id="site-footer"></div>
 
-    <div id="site-footer"></div>
-
-    <script src="includes.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="includes.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
