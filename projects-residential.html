@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects — Nortek Roofing</title>
+  <title>Residential Projects — Nortek Roofing</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -10,8 +10,11 @@
   <main>
     <section class="section">
       <div class="container">
-        <h1 class="section-title">Projects</h1>
-        <div id="projects"></div>
+        <h1 class="section-title">Residential Projects</h1>
+        <div id="projects" class="projects-grid"></div>
+        <div style="text-align:center;margin-top:24px;">
+          <a class="btn" href="projects-commercial.html">View Commercial Projects</a>
+        </div>
       </div>
     </section>
   </main>
@@ -19,19 +22,12 @@
   <script src="includes.js"></script>
   <script>
     fetch('data/projects.json').then(r=>r.json()).then(list => {
-      const wrap = document.getElementById('projects');
-      const card = p => `
+      const grid = document.getElementById('projects');
+      grid.innerHTML = list.filter(p=>p.category==='residential').map(p => `
         <a href="project.html?id=${encodeURIComponent(p.id)}">
           <img src="${p.cover}" alt="${p.title}">
           <div class="feature-meta"><h3>${p.title}</h3></div>
-        </a>`;
-      const commercial = list.filter(p => p.category === 'commercial').map(card).join('');
-      const residential = list.filter(p => p.category === 'residential').map(card).join('');
-      wrap.innerHTML = `
-        <h2 class="section-title">Commercial Projects</h2>
-        <div class="projects-grid">${commercial}</div>
-        <h2 class="section-title">Residential Projects</h2>
-        <div class="projects-grid">${residential}</div>`;
+        </a>`).join('');
     });
   </script>
 </body>

@@ -1,6 +1,7 @@
 [
   {
     "id": "proj1",
+    "category": "commercial",
     "title": "Project 1",
     "cover": "images/proj-1.jpg",
     "video": "hero.mp4",
@@ -14,6 +15,7 @@
   },
   {
     "id": "proj2",
+    "category": "commercial",
     "title": "Project 2",
     "cover": "images/proj-2.jpg",
     "video": "hero.mp4",
@@ -27,6 +29,7 @@
   },
   {
     "id": "proj3",
+    "category": "commercial",
     "title": "Project 3",
     "cover": "images/proj-3.jpg",
     "video": "hero.mp4",
@@ -40,6 +43,7 @@
   },
   {
     "id": "proj4",
+    "category": "commercial",
     "title": "Project 4",
     "cover": "images/proj-4.jpg",
     "video": "hero.mp4",
@@ -53,6 +57,7 @@
   },
   {
     "id": "proj5",
+    "category": "residential",
     "title": "Project 5",
     "cover": "images/proj-5.jpg",
     "video": "hero.mp4",
@@ -66,6 +71,7 @@
   },
   {
     "id": "proj6",
+    "category": "residential",
     "title": "Project 6",
     "cover": "images/proj-6.jpg",
     "video": "hero.mp4",
@@ -79,6 +85,7 @@
   },
   {
     "id": "proj7",
+    "category": "residential",
     "title": "Project 7",
     "cover": "images/proj-7.jpg",
     "video": "hero.mp4",
@@ -92,6 +99,7 @@
   },
   {
     "id": "proj8",
+    "category": "residential",
     "title": "Project 8",
     "cover": "images/proj-8.jpg",
     "video": "hero.mp4",
