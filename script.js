@@ -21,6 +21,7 @@ if (heroText && exploreBtn) {
   const min = 75;
   const max = 175;
   const delay = () => Math.random() * (max - min) + min;
+  const btnDelay = 1500;
   heroText.textContent = '';
 
   const type = (text, cb) => {
@@ -50,7 +51,7 @@ if (heroText && exploreBtn) {
       type(first, () => {
         setTimeout(() => {
           del(replace.length, () => {
-            type(second, () => setTimeout(() => exploreBtn.classList.add('show'), 100));
+            type(second, () => setTimeout(() => exploreBtn.classList.add('show'), btnDelay));
           });
         }, 1000);
       });
