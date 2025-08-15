@@ -24,6 +24,12 @@ h1,h2,h3{line-height:1.2;font-family:'Poppins','Inter',sans-serif}
 .logo{width:90px;height:auto;border-radius:6px}
 .nav{display:flex;gap:18px;align-items:center;font-family:'Poppins','Inter',sans-serif}
 .nav a{color:var(--text)}
+.nav .dropdown{position:relative}
+.nav .dropbtn{background:none;border:none;color:var(--text);font-family:'Poppins','Inter',sans-serif;cursor:pointer;padding:0}
+.nav .dropbtn::after{content:'\25BE';margin-left:4px;font-size:.8em}
+.nav .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#0d1217;border:1px solid #23303a;border-radius:12px;padding:10px;flex-direction:column;min-width:160px}
+.nav .dropdown-menu a{padding:6px 8px;white-space:nowrap}
+.nav .dropdown:hover .dropdown-menu{display:flex}
 .menu-btn{display:none}
 .btn{padding:10px 14px;border-radius:12px;border:1px solid #23303a;display:inline-block;font-family:'Poppins','Inter',sans-serif}
 .btn.primary{background:var(--brand);color:#0b110d;border-color:transparent;font-weight:700}
@@ -142,7 +148,7 @@ h1,h2,h3{line-height:1.2;font-family:'Poppins','Inter',sans-serif}
 .service-hero{position:relative;height:clamp(260px,50vh,420px);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center}
 .service-hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
 .service-hero h1{position:relative;margin:0;font-size:clamp(2rem,4vw,3rem);z-index:1;}
-.service-list{margin:18px 0;padding-left:20px}
+.service-list{margin:24px 0;padding-left:20px}
 .service-list li{margin:6px 0}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .fade-in{opacity:0;animation:fadeInUp .6s forwards}
@@ -179,6 +185,10 @@ h1,h2,h3{line-height:1.2;font-family:'Poppins','Inter',sans-serif}
   .menu-btn{display:block}
   .nav{display:none;position:absolute;right:20px;top:58px;background:#0d1217;border:1px solid #23303a;border-radius:12px;padding:10px;width:220px;flex-direction:column}
   .nav.open{display:flex}
+  .nav .dropdown{width:100%}
+  .nav .dropdown-menu{position:static;border:none;padding:0;margin-top:8px}
+  .nav .dropdown.open .dropdown-menu{display:flex}
+  .nav .dropbtn{width:100%;text-align:left}
   .projects-grid{grid-template-columns:1fr}
 }
 
