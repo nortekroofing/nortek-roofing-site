@@ -11,6 +11,8 @@
     <section class="section">
       <div class="container">
         <h1 id="proj-title" class="section-title">Project</h1>
+        <video id="proj-video" class="project-video" controls playsinline></video>
+        <p id="proj-desc" class="project-desc"></p>
         <div id="proj-media" class="projects-grid" style="grid-template-columns:repeat(3,1fr)"></div>
       </div>
     </section>
@@ -27,8 +29,16 @@
       const proj = list.find(p => p.id === id) || list[0];
       document.getElementById('proj-title').textContent = proj.title;
       document.getElementById('page-title').textContent = proj.title + ' — Nortek Roofing';
+      const vid = document.getElementById('proj-video');
+      if(proj.video){
+        vid.src = proj.video;
+        vid.poster = proj.cover;
+      } else {
+        vid.style.display = 'none';
+      }
+      document.getElementById('proj-desc').textContent = proj.description || '';
       const grid = document.getElementById('proj-media');
-      grid.innerHTML = (proj.media || []).map(src => \`<a href="\${src}" class="tile"><img src="\${src}" alt=""></a>\`).join('');
+      grid.innerHTML = (proj.media || []).map(src => `\n        <a href="${src}" class="tile"><img src="${src}" alt=""></a>`).join('');
       const lb = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
       grid.addEventListener('click', e => {

@@ -3,64 +3,104 @@
     "id": "proj1",
     "title": "Project 1",
     "cover": "images/proj-1.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 1.",
     "media": [
-      "images/proj-1.jpg"
+      "images/proj-1.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj2",
     "title": "Project 2",
     "cover": "images/proj-2.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 2.",
     "media": [
-      "images/proj-2.jpg"
+      "images/proj-2.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj3",
     "title": "Project 3",
     "cover": "images/proj-3.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 3.",
     "media": [
-      "images/proj-3.jpg"
+      "images/proj-3.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj4",
     "title": "Project 4",
     "cover": "images/proj-4.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 4.",
     "media": [
-      "images/proj-4.jpg"
+      "images/proj-4.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj5",
     "title": "Project 5",
     "cover": "images/proj-5.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 5.",
     "media": [
-      "images/proj-5.jpg"
+      "images/proj-5.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj6",
     "title": "Project 6",
     "cover": "images/proj-6.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 6.",
     "media": [
-      "images/proj-6.jpg"
+      "images/proj-6.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj7",
     "title": "Project 7",
     "cover": "images/proj-7.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 7.",
     "media": [
-      "images/proj-7.jpg"
+      "images/proj-7.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   },
   {
     "id": "proj8",
     "title": "Project 8",
     "cover": "images/proj-8.jpg",
+    "video": "hero.mp4",
+    "description": "Brief description for Project 8.",
     "media": [
-      "images/proj-8.jpg"
+      "images/proj-8.jpg",
+      "images/hero-1.jpg",
+      "images/hero-2.jpg",
+      "images/hero-3.jpg"
     ]
   }
 ]
