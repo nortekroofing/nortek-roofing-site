@@ -18,7 +18,7 @@ if (heroText && exploreBtn) {
   const first = 'Built for the West Coast.';
   const replace = 'West Coast.';
   const second = 'Island.';
-  const speed = 100;
+  const speed = 175;
   heroText.textContent = '';
 
   const type = (text, cb) => {
