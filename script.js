@@ -15,9 +15,9 @@ if (v){
 const heroText = document.getElementById('heroText');
 const exploreBtn = document.getElementById('exploreBtn');
 if (heroText && exploreBtn) {
-  const first = 'Built for the West Coast.';
-  const replace = 'West Coast.';
-  const second = 'Island.';
+  const first = 'made for the island.';
+  const replace = 'the island.';
+  const second = 'you.';
   const min = 75;
   const max = 175;
   const delay = () => Math.random() * (max - min) + min;
