@@ -14,6 +14,7 @@ if (v){
 // Hero text typewriter effect
 const heroText = document.getElementById('heroText');
 const exploreBtn = document.getElementById('exploreBtn');
+const cue = document.querySelector('.glass-cue');
 if (heroText && exploreBtn) {
   const first = 'Built for the West Coast.';
   const replace = 'West Coast.';
@@ -50,7 +51,10 @@ if (heroText && exploreBtn) {
       type(first, () => {
         setTimeout(() => {
           del(replace.length, () => {
-            type(second, () => setTimeout(() => exploreBtn.classList.add('show'), 100));
+            type(second, () => setTimeout(() => {
+              exploreBtn.classList.add('show');
+              if (cue) setTimeout(() => cue.classList.add('show'), 3000);
+            }, 100));
           });
         }, 1000);
       });
@@ -66,10 +70,4 @@ if (heroText && exploreBtn) {
   } else {
     run();
   }
-}
-
-// Subtle scroll cue
-const cue = document.querySelector('.glass-cue');
-if (cue) {
-  setTimeout(() => cue.classList.add('show'), 5000);
 }
