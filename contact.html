@@ -4,9 +4,13 @@
 <body>
   <div id="site-header"></div>
   <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>Request a Quote</h1>
+      </div>
+    </section>
     <section class="section">
       <div class="container">
-        <h1 class="section-title">Request a Quote</h1>
         <p class="muted">Email us at <a id="contact-email" href="#">email</a> or call <a id="contact-phone" href="#">phone</a>.</p>
         <script>fetch('data/site-config.json').then(r=>r.json()).then(c=>{ 
           const e=document.getElementById('contact-email'); e.textContent=c.email; e.href='mailto:'+c.email;
