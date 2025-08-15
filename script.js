@@ -43,12 +43,14 @@ if (heroText && exploreBtn) {
     step();
   };
 
-  setTimeout(() => type(first), 3000);
+  // start typing shortly after load for a snappier feel
+  const initialDelay = 1000; // ms
+  setTimeout(() => type(first), initialDelay);
   setTimeout(() => {
     del(replace.length, () => {
       type(second, () => exploreBtn.classList.add('show'));
     });
-  }, 18000);
+  }, initialDelay + 15000);
 }
 
 // Subtle scroll cue
