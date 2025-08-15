@@ -121,6 +121,15 @@ h1,h2,h3{line-height:1.2}
 .select-card__glass h2{margin:0;font-size:clamp(1.4rem,3vw,2rem)}
 .select-card__glass p{display:none}
 
+/* Service detail */
+.service-hero{position:relative;height:clamp(260px,50vh,420px);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center}
+.service-hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.service-hero h1{position:relative;margin:0;font-size:clamp(2rem,4vw,3rem);z-index:1;}
+.service-list{margin:18px 0;padding-left:20px}
+.service-list li{margin:6px 0}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{opacity:0;animation:fadeInUp .6s forwards}
+
 /* Projects grid */
 .projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .projects-grid a{display:block;border:1px solid #22303a;border-radius:14px;overflow:hidden;background:#0d1217;position:relative}
