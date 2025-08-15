@@ -48,7 +48,7 @@ if (heroText && exploreBtn) {
     del(replace.length, () => {
       type(second, () => exploreBtn.classList.add('show'));
     });
-  }, 18000);
+  }, 7000);
 }
 
 // Subtle scroll cue
