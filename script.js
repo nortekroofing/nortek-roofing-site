@@ -73,3 +73,38 @@ const cue = document.querySelector('.glass-cue');
 if (cue) {
   setTimeout(() => cue.classList.add('show'), 5000);
 }
+
+// Reveal on scroll & lightbox
+document.addEventListener('DOMContentLoaded', () => {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 60}ms`;
+      io.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  const lb = document.getElementById('lightbox');
+  if (lb) {
+    const lbImg = document.getElementById('lightbox-img');
+    document.addEventListener('click', e => {
+      const a = e.target.closest('[data-lightbox]');
+      if (!a) return;
+      e.preventDefault();
+      lbImg.src = a.dataset.lightbox || a.href;
+      lb.classList.add('open');
+    });
+    lb.addEventListener('click', () => lb.classList.remove('open'));
+  }
+});
