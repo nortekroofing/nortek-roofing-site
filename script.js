@@ -10,3 +10,9 @@ if (v){
   window.addEventListener('touchstart', kick, { passive:true });
   window.addEventListener('scroll', kick, { passive:true });
 }
+
+// Subtle scroll cue
+const cue = document.querySelector('.glass-cue');
+if (cue) {
+  setTimeout(() => cue.classList.add('show'), 5000);
+}
