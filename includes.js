@@ -39,5 +39,15 @@ async function applyConfig(){
     const menuBtn = document.getElementById('menuBtn');
     const nav = document.getElementById('nav');
     if(menuBtn && nav){ menuBtn.addEventListener('click', ()=> nav.classList.toggle('open')); }
+
+    const svcToggle = document.getElementById('servicesToggle');
+    if(svcToggle){
+      svcToggle.addEventListener('click', e => {
+        if (window.innerWidth <= 640){
+          e.preventDefault();
+          svcToggle.parentElement.classList.toggle('open');
+        }
+      });
+    }
   });
 })();
