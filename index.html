@@ -10,6 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "Nortek Roofing",
+    "url": "https://nortekroofing.example",
+    "areaServed": ["Victoria BC", "Westshore BC", "Nanaimo BC"]
+  }
+  </script>
 </head>
 <body class="home">
 
@@ -34,32 +43,133 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- Section 1: Impact Statement + Quick Stats -->
+    <section class="section impact" aria-labelledby="impact-heading">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="grid featured">
-          <a class="feature-card" href="projects.html">
-            <img src="images/proj-1.jpg" alt="Retail rooftop" loading="lazy">
-            <div class="feature-meta">
-              <h3>Boulderhouse Climbing</h3>
-            </div>
+        <h2 id="impact-heading" class="section-title">Building &amp; Protecting Large-Scale Roofs Across the West Coast</h2>
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <span class="stat-number">25+ Years</span>
+            <span class="stat-label">Delivering Complex Projects</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number">5M+ sq ft</span>
+            <span class="stat-label">Installed</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number">180k sq ft</span>
+            <span class="stat-label">Largest Single Project</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number">Licensed • Insured</span>
+            <span class="stat-label">COR-Aligned Safety</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Signature Projects Showcase -->
+    <section class="section projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-title">Signature Projects</h2>
+        <div class="showcase-grid">
+          <a href="images/proj-1.jpg" class="project-tile reveal">
+            <img src="images/proj-1.jpg" alt="Boulderhouse Climbing project" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Boulderhouse Climbing</h3><p class="small">Recreation • 45k sq ft</p></div>
           </a>
-          <a class="feature-card" href="projects.html">
-            <img src="images/proj-2.jpg" alt="Strata roof" loading="lazy">
-            <div class="feature-meta">
-              <h3>Hull's Corner Business Park</h3>
-            </div>
+          <a href="images/proj-2.jpg" class="project-tile reveal">
+            <img src="images/proj-2.jpg" alt="Hull's Corner Business Park" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Hull's Corner Business Park</h3><p class="small">Commercial • 60k sq ft</p></div>
           </a>
-          <a class="feature-card" href="projects.html">
-            <img src="images/proj-3.jpg" alt="Industrial building" loading="lazy">
-            <div class="feature-meta">
-              <h3>Meaford Avenue Apartments</h3>
-            </div>
+          <a href="images/proj-3.jpg" class="project-tile reveal">
+            <img src="images/proj-3.jpg" alt="Meaford Avenue Apartments" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Meaford Avenue Apartments</h3><p class="small">Multi-Residential • 90k sq ft</p></div>
+          </a>
+          <a href="images/proj-4.jpg" class="project-tile reveal">
+            <img src="images/proj-4.jpg" alt="Industrial complex project" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Industrial Complex</h3><p class="small">Industrial • 80k sq ft</p></div>
+          </a>
+          <a href="images/proj-5.jpg" class="project-tile reveal">
+            <img src="images/proj-5.jpg" alt="Retail distribution center" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Distribution Centre</h3><p class="small">Logistics • 120k sq ft</p></div>
+          </a>
+          <a href="images/proj-6.jpg" class="project-tile reveal">
+            <img src="images/proj-6.jpg" alt="Institutional roof" loading="lazy" decoding="async">
+            <div class="project-meta"><h3>Institutional Facility</h3><p class="small">Institutional • 75k sq ft</p></div>
           </a>
         </div>
       </div>
     </section>
+
+    <!-- Section 3: Why Nortek Pillars -->
+    <section class="section pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <h2 id="pillars-heading" class="section-title">Why Nortek</h2>
+        <div class="pillars-grid">
+          <div class="pillar-card reveal">
+            <h3>Safety &amp; Compliance at Scale</h3>
+            <p class="small">Dedicated safety teams and COR-aligned procedures.</p>
+          </div>
+          <div class="pillar-card reveal">
+            <h3>On-Time, On-Budget Delivery</h3>
+            <p class="small">Rigorous scheduling and cost control for predictability.</p>
+          </div>
+          <div class="pillar-card reveal">
+            <h3>Complex Detailing &amp; QA</h3>
+            <p class="small">Experienced crews tackling intricate details and quality assurance.</p>
+          </div>
+          <div class="pillar-card reveal">
+            <h3>Coordination with GCs &amp; Consultants</h3>
+            <p class="small">Transparent communication with project stakeholders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Process Timeline -->
+    <section class="section process" aria-labelledby="process-heading">
+      <div class="container">
+        <h2 id="process-heading" class="section-title">Process</h2>
+        <ol class="process-steps">
+          <li class="process-step reveal"><h3 class="step-title">Assessment &amp; Scope</h3></li>
+          <li class="process-step reveal"><h3 class="step-title">Planning &amp; Safety</h3></li>
+          <li class="process-step reveal"><h3 class="step-title">Execution &amp; QA</h3></li>
+          <li class="process-step reveal"><h3 class="step-title">Turnover &amp; Documentation</h3></li>
+          <li class="process-step reveal"><h3 class="step-title">Maintenance Programs</h3></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section 5: CTA Band -->
+    <section class="section cta-band alt" aria-labelledby="cta-heading">
+      <div class="container">
+        <h3 id="cta-heading">Ready to discuss a project?</h3>
+        <p class="muted">Enterprise roofing solutions for the West Coast.</p>
+        <div class="cta-actions">
+          <a class="btn primary" href="contact.html">Discuss a Project</a>
+          <a class="btn glass" href="projects.html">View Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Service Area Map + Areas -->
+    <section class="section service-area" aria-labelledby="area-heading">
+      <div class="container">
+        <h2 id="area-heading" class="section-title">Service Area</h2>
+        <div class="service-area__content">
+          <img src="images/service-area.jpg" alt="Map of service areas" loading="lazy" decoding="async">
+          <ul class="areas-list">
+            <li>Victoria</li>
+            <li>Westshore</li>
+            <li>Nanaimo</li>
+            <li>Surrounding Regions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <div class="lightbox" id="lightbox"><img id="lightbox-img" alt=""></div>
 
   <div id="site-footer"></div>
 
