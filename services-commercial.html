@@ -2,36 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Commercial Projects — Nortek Roofing</title>
+  <title>Commercial Roofing — Nortek Roofing</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="site-header"></div>
   <main>
+    <section class="service-hero" style="background-image:url('images/services-commercial.jpg')">
+      <h1>Commercial Roofing</h1>
+    </section>
     <section class="section">
       <div class="container">
-        <h1 class="section-title">Commercial Projects</h1>
-        <div id="projects" class="projects-grid"></div>
+        <p class="fade-in" style="animation-delay:0.1s">Nortek Roofing installs and maintains reliable roofing systems for warehouses, retail spaces, and multi‑unit buildings.</p>
+        <ul class="service-list">
+          <li class="fade-in" style="animation-delay:0.2s">Torch‑on membrane systems</li>
+          <li class="fade-in" style="animation-delay:0.3s">Custom metal fabrication</li>
+          <li class="fade-in" style="animation-delay:0.4s">Preventative maintenance</li>
+          <li class="fade-in" style="animation-delay:0.5s">Emergency repairs</li>
+        </ul>
+        <div class="fade-in" style="animation-delay:0.6s;margin-top:24px;">
+          <a class="btn primary" href="projects.html">View Project Gallery</a>
+        </div>
       </div>
     </section>
   </main>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox"><img id="lightbox-img" alt=""></div>
-
   <div id="site-footer"></div>
   <script src="includes.js"></script>
-  <script>
-    // Render project tiles
-    fetch('data/projects.json').then(r=>r.json()).then(list => {
-      const grid = document.getElementById('projects');
-      grid.innerHTML = list.map(p => \`
-        <a href="project.html?id=\${encodeURIComponent(p.id)}">
-          <img src="\${p.cover}" alt="\${p.title}">
-          <div class="feature-meta"><h3>\${p.title}</h3></div>
-        </a>\`
-      ).join('');
-    });
-  </script>
 </body>
 </html>
