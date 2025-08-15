@@ -37,7 +37,7 @@ h1,h2,h3{line-height:1.2}
 .hero-overlay h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 1rem}
 .hero-overlay p{width:100%;margin:0 0 1.0rem}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:10px 0 0}
-#exploreBtn{opacity:0;pointer-events:none;transition:opacity .6s ease}
+#exploreBtn{opacity:0;pointer-events:none;transition:opacity 1.2s ease}
 #exploreBtn.show{opacity:1;pointer-events:auto}
 
 /* Opaque Glass Button */

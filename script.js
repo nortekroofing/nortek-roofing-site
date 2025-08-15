@@ -46,7 +46,7 @@ if (heroText && exploreBtn) {
   setTimeout(() => type(first), 3000);
   setTimeout(() => {
     del(replace.length, () => {
-      type(second, () => exploreBtn.classList.add('show'));
+        type(second, () => setTimeout(() => exploreBtn.classList.add('show'), 100));
     });
   }, 7000);
 }
