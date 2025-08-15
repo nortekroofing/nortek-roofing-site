@@ -18,7 +18,9 @@ if (heroText && exploreBtn) {
   const first = 'Built for the West Coast.';
   const replace = 'West Coast.';
   const second = 'Island.';
-  const speed = 175;
+  const min = 75;
+  const max = 175;
+  const delay = () => Math.random() * (max - min) + min;
   heroText.textContent = '';
 
   const type = (text, cb) => {
@@ -26,7 +28,7 @@ if (heroText && exploreBtn) {
     const step = () => {
       if (i < text.length) {
         heroText.textContent += text[i++];
-        setTimeout(step, speed);
+        setTimeout(step, delay());
       } else if (cb) cb();
     };
     step();
@@ -37,18 +39,33 @@ if (heroText && exploreBtn) {
       if (count > 0) {
         heroText.textContent = heroText.textContent.slice(0, -1);
         count--;
-        setTimeout(step, speed);
+        setTimeout(step, delay());
       } else if (cb) cb();
     };
     step();
   };
 
-  setTimeout(() => type(first), 3000);
-  setTimeout(() => {
-    del(replace.length, () => {
-        type(second, () => setTimeout(() => exploreBtn.classList.add('show'), 100));
-    });
-  }, 7000);
+  const run = () => {
+    setTimeout(() => {
+      type(first, () => {
+        setTimeout(() => {
+          del(replace.length, () => {
+            type(second, () => setTimeout(() => exploreBtn.classList.add('show'), 100));
+          });
+        }, 1000);
+      });
+    }, 500);
+  };
+
+  if (v) {
+    if (!v.paused && v.currentTime > 0) {
+      run();
+    } else {
+      v.addEventListener('playing', run, { once: true });
+    }
+  } else {
+    run();
+  }
 }
 
 // Subtle scroll cue
