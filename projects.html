@@ -23,7 +23,7 @@
       grid.innerHTML = list.map(p => \`
         <a href="project.html?id=\${encodeURIComponent(p.id)}">
           <img src="\${p.cover}" alt="\${p.title}">
-          <div class="feature-meta" style="padding:10px"><h3>\${p.title}</h3></div>
+          <div class="feature-meta"><h3>\${p.title}</h3></div>
         </a>\`
       ).join('');
     });
