@@ -1,9 +1,7 @@
 import Header from "@/components/Header"
 import dynamic from "next/dynamic"
 
-const FeaturedProjects = dynamic(() => import("@/components/FeaturedProjectsClient"), { ssr:false })
-import WhatWeDo from "@/components/WhatWeDo"
-import SiteFooter from "@/components/SiteFooter"
+import FeaturedProjects from "@/components/FeaturedProjectsClient"
 
 export default function Home() {
   return (
