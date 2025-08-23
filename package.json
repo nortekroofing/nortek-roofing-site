@@ -1,9 +1,32 @@
 {
   "name": "nortek-roofing-site",
   "version": "1.0.0",
-  "description": "Static website for Nortek Roofing",
   "private": true,
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "studio": "npm run dev --prefix studio",
+    "studio:build": "npm run build --prefix studio",
+    "studio:serve": "npm run start --prefix studio"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "next-sanity": "latest",
+    "@sanity/client": "latest",
+    "@portabletext/react": "latest",
+    "framer-motion": "latest",
+    "classnames": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest",
+    "tailwindcss": "latest",
+    "postcss": "latest",
+    "autoprefixer": "latest"
   }
 }
