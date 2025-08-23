@@ -49,5 +49,18 @@ async function applyConfig(){
         }
       });
     }
+
+    // Hero nav glide effect
+    const headerEl = document.querySelector('.site-header');
+    const hero = document.querySelector('.hero-video');
+    if (headerEl && hero){
+      const update = () => {
+        const offset = Math.max(hero.getBoundingClientRect().bottom - headerEl.offsetHeight, 0);
+        headerEl.style.transform = `translateY(${offset}px)`;
+      };
+      update();
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+    }
   });
 })();
