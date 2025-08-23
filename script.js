@@ -46,4 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     lb.addEventListener('click', () => lb.classList.remove('open'));
   }
+
+  const cards = document.querySelectorAll('.project-card');
+  if (cards.length) {
+    import('https://cdn.jsdelivr.net/npm/motion@10.16.4/+esm').then(({ animate }) => {
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          animate(card, { rotateX: -4, rotateY: 4, scale: 1.03 }, { duration: 0.4 });
+        });
+        card.addEventListener('mouseleave', () => {
+          animate(card, { rotateX: 0, rotateY: 0, scale: 1 }, { duration: 0.4 });
+        });
+      });
+    }).catch(()=>{});
+  }
 });
