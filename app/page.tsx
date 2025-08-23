@@ -1,8 +1,14 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header"
+import dynamic from "next/dynamic"
+
+const FeaturedProjects = dynamic(() => import("@/components/FeaturedProjectsClient"), { ssr:false })
+import WhatWeDo from "@/components/WhatWeDo"
+import SiteFooter from "@/components/SiteFooter"
 
 export default function Home() {
   return (
     <>
+      {/* Fixed hero video stays put; header will glide over it */}
       <section className="hero-video" id="hero">
         <video className="hero-bg" src="/hero.mp4" autoPlay muted loop playsInline />
         <div className="hero-overlay">
@@ -15,38 +21,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Solid dark header that starts bottom and glides up */}
       <Header isHome />
 
+      {/* Content that scrolls over the hero */}
       <main>
         <section className="section">
           <div className="container">
             <h2 className="section-title">Featured Projects</h2>
-            <div className="grid featured">
-              <a className="feature-card" href="/projects">
-                <img src="/placeholder.svg" alt="Project" />
-                <div className="feature-meta">
-                  <h3>Boulderhouse Climbing Langford</h3>
-                  <p className="muted small">1109 Langford Pkwy</p>
-                </div>
-              </a>
-              <a className="feature-card" href="/projects">
-                <img src="/placeholder.svg" alt="Project" />
-                <div className="feature-meta">
-                  <h3>Hull’s Corner Business Park</h3>
-                  <p className="muted small">967 Langford Pkwy</p>
-                </div>
-              </a>
-              <a className="feature-card" href="/projects">
-                <img src="/placeholder.svg" alt="Project" />
-                <div className="feature-meta">
-                  <h3>Meaford Heights Apartments</h3>
-                  <p className="muted small">728 Meaford Ave</p>
-                </div>
-              </a>
-            </div>
+            {/* Motion hover grid */}
+            {/* @ts-expect-error async client */}
+            <FeaturedProjects />
+            <p style={{textAlign:'center', marginTop: '16px'}}>
+              <a className="btn ghost" href="/projects">All Projects</a>
+            </p>
           </div>
         </section>
+
+        <WhatWeDo />
       </main>
+
+      <SiteFooter />
     </>
-  );
+  )
 }
