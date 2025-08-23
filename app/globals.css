@@ -1,3 +1,56 @@
+body.home main {
+  background: var(--bg); /* ensures solid background after hero */
+  position: relative;
+  z-index: 1;
+}
+/* Header layout */
+.site-header .brand { margin-right: auto; } /* pushes logo left */
+.menu-btn { margin-left: auto; }            /* pushes menu right */
+.site-header .brand span { display: none; } /* hide company name */
+
+/* Fullscreen menu overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.menu-overlay.open { display: flex; }
+body.menu-open { overflow: hidden; } /* disable scroll when menu open */
+
+.menu-overlay a {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: var(--text);
+}
+/* Header layout */
+.site-header .brand { margin-right: auto; } /* pushes logo left */
+.menu-btn { margin-left: auto; }            /* pushes menu right */
+.site-header .brand span { display: none; } /* hide company name */
+
+/* Fullscreen menu overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.menu-overlay.open { display: flex; }
+body.menu-open { overflow: hidden; } /* disable scroll when menu open */
+
+.menu-overlay a {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: var(--text);
+}
 :root{
   --bg:#0f1215; --surface:#151a20; --muted:#8b97a4; --text:#e8edf2; --brand:#1db954;
   --header-h: 64px;
@@ -99,3 +152,106 @@ main{padding-top:var(--header-h)}
   .grid.featured{grid-template-columns:1fr}
   .nav{display:none}
 }
+
+/* Hero stacked text */
+.hero-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  font-family: 'Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.hero-stack em {
+  font-style: italic;
+}
+
+/* Ensure content that scrolls over the fixed hero is opaque */
+body.home main{
+  background: #0f1215;   /* same as your site bg */
+  position: relative;
+  z-index: 1;            /* above the fixed hero video */
+}
+
+/* Optional: keep sections opaque as well */
+.section{ background: #0f1215; }
+.section.alt{ background: #151a20; }
+
+/* Header pinned above hero, edges pushed out */
+.site-header{
+  position:fixed; top:0; left:0; right:0; z-index:20;
+  background: transparent; /* sits over the hero */
+  border-bottom: 1px solid transparent;
+}
+.header-inner.edge{
+  height: 64px;
+  display:flex; align-items:center; justify-content:space-between;
+  padding-left: clamp(14px, 4vw, 40px);
+  padding-right: clamp(14px, 4vw, 40px);
+}
+.brand{ display:inline-flex; align-items:center; }
+.logo{ height: 34px; width:auto; display:block; }
+
+/* 3-line hamburger button */
+.menu-btn{
+  width: 42px; height: 32px; position:relative; border:0; background:transparent; cursor:pointer;
+}
+.menu-btn span{
+  position:absolute; left:0; right:0; height:2px; background:#e8edf2; border-radius:2px; transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.menu-btn span:nth-child(1){ top: 6px; }
+.menu-btn span:nth-child(2){ top: 15px; }
+.menu-btn span:nth-child(3){ top: 24px; }
+.menu-btn.open span:nth-child(1){ top: 15px; transform: rotate(45deg); }
+.menu-btn.open span:nth-child(2){ opacity:0; }
+.menu-btn.open span:nth-child(3){ top: 15px; transform: rotate(-45deg); }
+
+/* Full-screen no-scroll menu overlay */
+.menu-panel{
+  position: fixed; inset: 0;
+  background: rgba(10,12,14,.72);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  z-index: 19;                  /* sits under header so the button stays clickable */
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease;
+}
+.menu-panel.open{
+  opacity: 1; pointer-events: auto;
+}
+.menu-nav{
+  position:absolute; inset: 0;
+  display:grid; place-content:center; gap: 18px;
+  padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  text-align:center;
+}
+.menu-nav a{
+  font-size: clamp(24px, 4.2vw, 44px);
+  line-height: 1.1;
+  font-weight: 700;
+  color: #e8edf2;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.menu-nav a:hover{ opacity:.9; transform: translateY(-1px); }
+
+/* When the menu is open, prevent page from scrolling (JS also locks overflow) */
+body[data-menu-open="true"]{
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Ensure scrolling content is opaque over the hero */
+body.home main{
+  background: #0f1215;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sections still solid */
+.section{ background:#0f1215; }
+.section.alt{ background:#151a20; }
+

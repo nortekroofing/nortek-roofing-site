@@ -1,47 +1,53 @@
-"use client";
-import { useEffect } from "react";
+'use client'
+
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function Header({ isHome = false }: { isHome?: boolean }) {
+  const [open, setOpen] = useState(false)
+
   useEffect(() => {
-    if (!isHome) return;
-    const headerEl = document.querySelector<HTMLElement>(".site-header");
-    const heroEl   = document.querySelector<HTMLElement>(".hero-video");
-    if (!headerEl || !heroEl) return;
-
-    const headerH = () => headerEl.offsetHeight || 64;
-    const heroH   = () => Math.max(heroEl.offsetHeight, window.innerHeight || 0);
-
-    let ticking = false;
-    const update = () => {
-      const remaining = Math.max(heroH() - headerH() - window.scrollY, 0);
-      headerEl.style.transform = `translateY(${remaining}px)`;
-      ticking = false;
-    };
-    const onScroll = () => { if (!ticking){ ticking = true; requestAnimationFrame(update); } };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", update);
+    document.body.dataset.menuOpen = open ? 'true' : 'false'
+    document.documentElement.style.overflow = open ? 'hidden' : ''
+    document.body.style.overflow = open ? 'hidden' : ''
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", update);
-    };
-  }, [isHome]);
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
+      delete document.body.dataset.menuOpen
+    }
+  }, [open])
+
+  const closeAndGo = () => setOpen(false)
 
   return (
-    <header className="site-header">
-      <div className="container header-inner">
-        <a className="brand" href="/">
-          <img src="/logo.svg" alt="" className="logo" />
-          <span>Nortek Roofing</span>
-        </a>
-        <nav className="nav" id="nav">
-          <a href="/projects">Projects</a>
-          <a href="/services">Services</a>
-          <a href="/about">About</a>
-          <a href="/contact" className="btn primary">Contact</a>
+    <>
+      <header className={`site-header${isHome ? ' home' : ''}`}>
+        <div className="header-inner edge">
+          <Link href="/" className="brand" aria-label="Nortek home">
+            <img src="/logo.svg" alt="Nortek" className="logo" />
+          </Link>
+
+          <button
+            className={`menu-btn${open ? ' open' : ''}`}
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen(v => !v)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <div className={`menu-panel${open ? ' open' : ''}`} role="dialog" aria-modal="true">
+        <nav className="menu-nav">
+          <Link href="/services" onClick={closeAndGo}>Services</Link>
+          <Link href="/projects" onClick={closeAndGo}>Projects</Link>
+          <Link href="/about" onClick={closeAndGo}>About</Link>
+          <Link href="/contact" onClick={closeAndGo}>Contact</Link>
         </nav>
       </div>
-    </header>
-  );
+    </>
+  )
 }
