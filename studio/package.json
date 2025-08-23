@@ -1,0 +1,12 @@
+{
+  "name": "nortek-roofing-studio",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "start": "sanity start"
+  },
+  "dependencies": {
+    "sanity": "latest"
+  }
+}
