@@ -24,3 +24,6 @@ logs
 studio/node_modules
 studio/.sanity
 studio/dist
+
+# TypeScript
+tsconfig.tsbuildinfo
