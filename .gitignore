@@ -28,3 +28,4 @@ studio/dist
 # TypeScript
 tsconfig.tsbuildinfo
 .DS_Store
+.vercel
