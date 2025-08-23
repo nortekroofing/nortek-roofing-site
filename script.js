@@ -11,63 +11,7 @@ if (v){
   window.addEventListener('scroll', kick, { passive:true });
 }
 
-// Hero text typewriter effect
-const heroText = document.getElementById('heroText');
-const exploreBtn = document.getElementById('exploreBtn');
-if (heroText && exploreBtn) {
-  const first = 'made for the island.';
-  const replace = 'the island.';
-  const second = 'you.';
-  const min = 75;
-  const max = 175;
-  const delay = () => Math.random() * (max - min) + min;
-  const btnDelay = 1500;
-  heroText.textContent = '';
-
-  const type = (text, cb) => {
-    let i = 0;
-    const step = () => {
-      if (i < text.length) {
-        heroText.textContent += text[i++];
-        setTimeout(step, delay());
-      } else if (cb) cb();
-    };
-    step();
-  };
-
-  const del = (count, cb) => {
-    const step = () => {
-      if (count > 0) {
-        heroText.textContent = heroText.textContent.slice(0, -1);
-        count--;
-        setTimeout(step, delay());
-      } else if (cb) cb();
-    };
-    step();
-  };
-
-  const run = () => {
-    setTimeout(() => {
-      type(first, () => {
-        setTimeout(() => {
-          del(replace.length, () => {
-            type(second, () => setTimeout(() => exploreBtn.classList.add('show'), btnDelay));
-          });
-        }, 1000);
-      });
-    }, 500);
-  };
-
-  if (v) {
-    if (!v.paused && v.currentTime > 0) {
-      run();
-    } else {
-      v.addEventListener('playing', run, { once: true });
-    }
-  } else {
-    run();
-  }
-}
+// (Typewriter effect removed; hero text is now static)
 
 // Subtle scroll cue
 const cue = document.querySelector('.glass-cue');
