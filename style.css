@@ -160,11 +160,9 @@ h1,h2,h3{line-height:1.2}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;text-align:center;margin-top:24px}
-.stat{position:relative;padding:20px;border-radius:12px;border:1px solid var(--brand);background:rgba(0,0,0,.4);box-shadow:0 0 10px var(--brand),0 0 20px rgba(29,185,84,.6);animation:neonFlicker 3s infinite}
+.stat{position:relative;padding:20px;border-radius:12px;border:1px solid var(--brand);background:rgba(0,0,0,.4)}
 .stat::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.05)0 2px,transparent 2px 4px);mix-blend-mode:overlay;pointer-events:none}
-.stat-number{display:block;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:6px;color:var(--brand);text-shadow:0 0 8px var(--brand),0 0 16px var(--brand)}
-.stat-label{text-shadow:0 0 4px rgba(29,185,84,.6)}
-@keyframes neonFlicker{0%,100%{box-shadow:0 0 10px var(--brand),0 0 20px rgba(29,185,84,.6);opacity:1}2%,4%{box-shadow:0 0 2px var(--brand),0 0 4px rgba(29,185,84,.2);opacity:.6}3%,5%{box-shadow:0 0 10px var(--brand),0 0 20px rgba(29,185,84,.6);opacity:1}50%{box-shadow:0 0 12px var(--brand),0 0 24px rgba(29,185,84,.8);opacity:1}51%{box-shadow:0 0 3px var(--brand),0 0 6px rgba(29,185,84,.3);opacity:.7}52%{box-shadow:0 0 12px var(--brand),0 0 24px rgba(29,185,84,.8);opacity:1}70%{box-shadow:0 0 12px var(--brand),0 0 24px rgba(29,185,84,.8);opacity:1}71%{box-shadow:0 0 3px var(--brand),0 0 6px rgba(29,185,84,.3);opacity:.7}72%{box-shadow:0 0 10px var(--brand),0 0 20px rgba(29,185,84,.6);opacity:1}73%{box-shadow:0 0 4px var(--brand),0 0 8px rgba(29,185,84,.4);opacity:.8}75%{box-shadow:0 0 10px var(--brand),0 0 20px rgba(29,185,84,.6);opacity:1}}
+.stat-number{display:block;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:6px;color:var(--brand)}
 .projects-showcase{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .project-tile{position:relative;display:block;border:1px solid #222c36;border-radius:16px;overflow:hidden;background:var(--surface);box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .35s ease,filter .35s ease}
 .project-tile img{width:100%;aspect-ratio:4/3;object-fit:cover}
