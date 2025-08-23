@@ -29,3 +29,4 @@ studio/dist
 tsconfig.tsbuildinfo
 .DS_Store
 .vercel
+app/*.bak
