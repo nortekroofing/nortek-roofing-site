@@ -1,18 +1,47 @@
-import Link from 'next/link'
+"use client";
+import { useEffect } from "react";
 
-export default function Header(){
+export default function Header({ isHome = false }: { isHome?: boolean }) {
+  useEffect(() => {
+    if (!isHome) return;
+    const headerEl = document.querySelector<HTMLElement>(".site-header");
+    const heroEl   = document.querySelector<HTMLElement>(".hero-video");
+    if (!headerEl || !heroEl) return;
+
+    const headerH = () => headerEl.offsetHeight || 64;
+    const heroH   = () => Math.max(heroEl.offsetHeight, window.innerHeight || 0);
+
+    let ticking = false;
+    const update = () => {
+      const remaining = Math.max(heroH() - headerH() - window.scrollY, 0);
+      headerEl.style.transform = `translateY(${remaining}px)`;
+      ticking = false;
+    };
+    const onScroll = () => { if (!ticking){ ticking = true; requestAnimationFrame(update); } };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", update);
+    };
+  }, [isHome]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-md">
-      <div className="container flex h-[var(--header-h)] items-center justify-between">
-        <Link href="/" className="font-bold tracking-wide">Nortek</Link>
-        <nav className="flex gap-6 text-sm">
-          <Link href="/projects" className="hover:text-white">Projects</Link>
-          <Link href="/services" className="hover:text-white">Services</Link>
-          <Link href="/about" className="hover:text-white">About</Link>
-          <Link href="/login" className="hover:text-white">Employee Login</Link>
-          <Link href="/contact" className="btn btn-primary">Contact</Link>
+    <header className="site-header">
+      <div className="container header-inner">
+        <a className="brand" href="/">
+          <img src="/logo.svg" alt="" className="logo" />
+          <span>Nortek Roofing</span>
+        </a>
+        <nav className="nav" id="nav">
+          <a href="/projects">Projects</a>
+          <a href="/services">Services</a>
+          <a href="/about">About</a>
+          <a href="/contact" className="btn primary">Contact</a>
         </nav>
       </div>
     </header>
-  )
+  );
 }
