@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "tsc --noEmit",
+    "test": "npm run lint",
     "studio": "npm run dev --prefix studio",
     "studio:build": "npm run build --prefix studio",
     "studio:serve": "npm run start --prefix studio"
