@@ -9,6 +9,7 @@ export default function Header(){
           <Link href="/projects" className="hover:text-white">Projects</Link>
           <Link href="/services" className="hover:text-white">Services</Link>
           <Link href="/about" className="hover:text-white">About</Link>
+          <Link href="/login" className="hover:text-white">Employee Login</Link>
           <Link href="/contact" className="btn btn-primary">Contact</Link>
         </nav>
       </div>
