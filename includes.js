@@ -48,9 +48,12 @@ async function applyConfig(){
     // Hero nav glide effect
     const headerEl = document.querySelector('.site-header');
     const hero = document.querySelector('.hero-video');
+    const mainEl = document.querySelector('body.home main');
     if (headerEl && hero){
       const update = () => {
-        const offset = Math.max(hero.getBoundingClientRect().bottom - headerEl.offsetHeight, 0);
+        const heroH = hero.offsetHeight;
+        if (mainEl) mainEl.style.marginTop = heroH + 'px';
+        const offset = Math.max(heroH - window.scrollY - headerEl.offsetHeight, 0);
         headerEl.style.transform = `translateY(${offset}px)`;
       };
       update();
