@@ -13,12 +13,6 @@ if (v){
 
 // (Typewriter effect removed; hero text is now static)
 
-// Subtle scroll cue
-const cue = document.querySelector('.glass-cue');
-if (cue) {
-  setTimeout(() => cue.classList.add('show'), 5000);
-}
-
 // Reveal on scroll & lightbox
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
