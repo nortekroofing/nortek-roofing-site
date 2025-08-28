@@ -23,6 +23,8 @@
     "next-sanity": "^10.0.13",
     "react": "latest",
     "react-dom": "latest",
+    "@supabase/supabase-js": "latest",
+    "idb-keyval": "latest",
     "sanity": "^4.5.0",
     "styled-components": "^6.1.19"
   },
