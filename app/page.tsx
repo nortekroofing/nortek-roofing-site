@@ -1,7 +1,7 @@
-import Header from "@/components/Header"
-import dynamic from "next/dynamic"
-
-import FeaturedProjects from "@/components/FeaturedProjectsClient"
+import FeaturedProjects from "@/components/FeaturedProjectsClient";
+import Header from "@/components/Header";
+import WhatWeDo from "@/components/WhatWeDo";
+import SiteFooter from "@/components/SiteFooter";
 
 export default function Home() {
   return (
@@ -28,7 +28,6 @@ export default function Home() {
           <div className="container">
             <h2 className="section-title">Featured Projects</h2>
             {/* Motion hover grid */}
-            {/* @ts-expect-error async client */}
             <FeaturedProjects />
             <p style={{textAlign:'center', marginTop: '16px'}}>
               <a className="btn ghost" href="/projects">All Projects</a>
